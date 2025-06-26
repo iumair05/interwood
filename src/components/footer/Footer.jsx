@@ -32,7 +32,6 @@ export default function Footer() {
     {/* Background Image */}
     <Box
       className="absolute inset-0 -z-10"
-      
       sx={{
         backgroundImage: `url(${FooterImage.src})`,
         backgroundSize: 'cover',
