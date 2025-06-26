@@ -49,6 +49,7 @@ export default function Footer() {
             INFORMATION
           </Typography>
           <ul className="space-y-2 text-sm">
+            
             {[
               "About Us",
               "Store Locator",
