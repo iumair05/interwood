@@ -1,30 +1,28 @@
 'use client';
+
 import React from 'react';
 import Image from 'next/image';
-import Bed1 from '../explorehomeImages/bed1.png';
-import Bed2 from '../explorehomeImages/bed2.png';
-import Bed3 from '../explorehomeImages/bed3.png';
-import Bed4 from '../explorehomeImages/bed4.png';
-import Bed5 from '../explorehomeImages/bed5.png';
-import Bed6 from '../explorehomeImages/bed6.png';
-import LayerExploreHome from '../explorehomeImages/layerExploreHome.png';
 
-// Bed data
+import { ExploreSectionImages, images } from '@/utils/ImagesData';
+
 const beds = [
-  { img: Bed1, name: 'Modern King Bed', price: '$799' },
-  { img: Bed2, name: 'Classic Queen Bed', price: '$699' },
-  { img: Bed3, name: 'Stylish Twin Bed', price: '$499' },
-  { img: Bed4, name: 'Luxury Bed Frame', price: '$999' },
-  { img: Bed5, name: 'Minimalist Bed', price: '$599' },
-  { img: Bed6, name: 'Rustic Wooden Bed', price: '$849' },
+  { img: ExploreSectionImages.bed, name: 'Modern King Bed', price: '$799' },
+  { img: ExploreSectionImages.sofa, name: 'Classic Queen Bed', price: '$699' },
+  { img: ExploreSectionImages.chair, name: 'Stylish Twin Bed', price: '$499' },
+  { img: ExploreSectionImages.dining, name: 'Luxury Bed Frame', price: '$999' },
+  { img: ExploreSectionImages.wardrobe, name: 'Minimalist Bed', price: '$599' },
+  { img: ExploreSectionImages.table, name: 'Rustic Wooden Bed', price: '$849' },
 ];
 
+
 const ExploreHome = () => {
+
   return (
     <div className="w-full px-4 py-8">
       <div
         className="relative w-60 h-12 flex items-center justify-center bg-center bg-cover mb-6"
-        style={{ backgroundImage: `url(${LayerExploreHome.src})` }}
+        style={{ backgroundImage: `url(${images.headingBg})` }}
+
       >
         <h2 className="text-2xl font-bold text-black drop-shadow-md">Explore Home</h2>
       </div>
@@ -43,10 +41,8 @@ const ExploreHome = () => {
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="bg-none p-4 text-center">
-              <h3 className="text-lg font-semibold text-gray-900">{bed.name}</h3>
-              <p className="text-sm text-gray-600">{bed.price}</p>
-            </div>
+
+
           </div>
         ))}
       </div>

@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+body {
+    background-color: '#faf0e8';
+}
+
+@layer components {
+
+    .custom-container {
+        @apply  max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8;
+    }
+    .mainBg {
+        @apply bg-['#faf0e8'];
+    }
+
+}

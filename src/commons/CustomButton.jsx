@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Button } from "@mui/material";
 
 const CustomButton = ({
   text,
@@ -9,22 +8,20 @@ const CustomButton = ({
   type = "button",
   className = "",
   disabled = false,
-  color = "primary",
-  fullWidth = true,
   ...props
 }) => {
   return (
-    <Button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      color={color}
-      className={`${className}`}
-      variant='contained'
-      {...props}
-    >
-      {text}
-    </Button>
+    <>
+      <button
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
+        className={`bg-[#B2A191] hover:opacity-90 cursor-pointer text-white px-6 py-2 rounded shadow transition duration-300 ${className}`}
+        {...props}
+      >
+        {text}
+      </button>
+    </>
   );
 };
 

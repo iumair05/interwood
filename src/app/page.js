@@ -1,13 +1,13 @@
 "use client";
 
-import React from 'react';
-
-import HeroSection from '@/components/HeroSection/HeroSection';
+import DiscoverMoreSection from '@/components/Explorehome/DiscoverMoreSection';
 import ExploreHome from '@/components/Explorehome/ExploreHome';
 import ExploreOffice from '@/components/Exploreoffice/ExploreOffice';
-import DiscoverMoreSection from '@/components/discovermore/DiscoverMoreSection';
-import FeatureProducts from '@/components/featureProducts/FeatureProducts';
+import OfficeCollection from '@/components/Exploreoffice/OfficeCollection';
+import FeatureProducts from '@/components/FeatureProducts/FeatureProducts';
+import HeroSection from '@/components/HeroSection/HeroSection';
 import UserReviews from '@/components/UserReviews/UserReviews';
+import React from 'react';
 
 export default function HomePage() {
 
@@ -18,6 +18,7 @@ export default function HomePage() {
       <ExploreHome />
       <DiscoverMoreSection />
       <ExploreOffice />
+      <OfficeCollection />
       <FeatureProducts />
       <UserReviews />
     </div>

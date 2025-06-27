@@ -27,6 +27,7 @@ const TikTokIcon = (props) => (
 );
 
 export default function Footer() {
+  
   return (
     <Box component="footer" className="relative overflow-hidden -mt-1">
     {/* Background Image */}

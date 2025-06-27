@@ -1,46 +1,39 @@
 'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import BaadMayWeb from '../heroSliderImages/baadmay-web.webp'
-import BaadMayMobile from '../heroSliderImages/baadmay-mobile.webp'
-import CafeteriaWeb from '../heroSliderImages/cafeteria-web.webp'
-import CafeteriaMobile from '../heroSliderImages/cafeteria-mobile.webp'
-import SummerSaleWeb from '../heroSliderImages/summerSale-web.webp'
-import SummerSaleMobile from '../heroSliderImages/summerSale-mobile.webp'
-import ViewFurnitureWeb from '../heroSliderImages/viewFurniture-web.webp'
-import ViewFurnitureMobile from '../heroSliderImages/viewFurniture-mobile.webp'
+import { HeroSectionImages } from '@/utils/ImagesData'
 
 const slides = [
-    {
-      id: 3,
-      web: SummerSaleWeb,
-      mobile: SummerSaleMobile,
-      alt: 'Summer Sale',
-    },
-    {
-      id: 1,
-      web: BaadMayWeb,
-      mobile: BaadMayMobile,
-      alt: 'BaadMay',
-    },
-    {
-      id: 2,
-      web: CafeteriaWeb,
-      mobile: CafeteriaMobile,
-      alt: 'Cafeteria',
-    },
-    {
-      id: 4,
-      web: ViewFurnitureWeb,
-      mobile: ViewFurnitureMobile,
-      alt: 'View Furniture',
-    },
-  ]
-  
+  {
+    id: 3,
+    web: HeroSectionImages.SummerSaleWeb,
+    mobile: HeroSectionImages.SummerSaleMobile,
+    alt: 'Summer Sale'
+  },
+  {
+    id: 1,
+    web: HeroSectionImages.BaadMayWeb,
+    mobile: HeroSectionImages.BaadMayMobile,
+    alt: 'BaadMay'
+  },
+  {
+    id: 2,
+    web: HeroSectionImages.CafeteriaWeb,
+    mobile: HeroSectionImages.CafeteriaMobile,
+    alt: 'Cafeteria'
+  },
+  {
+    id: 4,
+    web: HeroSectionImages.ViewFurnitureWeb,
+    mobile: HeroSectionImages.ViewFurnitureMobile,
+    alt: 'View Furniture'
+  }
+]
 
 const HeroSection = () => {
   return (
@@ -52,10 +45,10 @@ const HeroSection = () => {
         loop={true}
         className="w-full h-full"
       >
-        {slides.map((slide) => (
+        {slides.map(slide => (
           <SwiperSlide key={slide.id}>
             {/* Desktop Image */}
-            <div className="hidden md:block w-full h-[520px] relative">
+            <div className="hidden md:block w-full h-[90vh] relative">
               <Image
                 src={slide.web}
                 alt={slide.alt}
@@ -80,19 +73,29 @@ const HeroSection = () => {
 
       {/* Optional: Centered pagination styling */}
       <style jsx global>{`
-        .swiper-pagination {
-          bottom: 20px !important;
-          text-align: center;
-        }
-        .swiper-pagination-bullet {
-          background: #000;
-          opacity: 0.5;
-        }
-        .swiper-pagination-bullet-active {
-          background: #000;
-          opacity: 1;
-        }
-      `}</style>
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 2px solid #b2a191;
+    opacity: 1;
+    border-radius: 50%;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #b2a191;
+    transform: scale(1.2);
+  }
+
+  .swiper-pagination {
+    bottom: 20px !important;
+    text-align: center;
+  }
+`}</style>
+
+
     </div>
   )
 }

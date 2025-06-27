@@ -82,6 +82,7 @@ const officeDropdownSections = [
 ];
 
 const Header = () => {
+  
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [anchorElHome, setAnchorElHome] = useState(null);
   const [anchorElOffice, setAnchorElOffice] = useState(null);
