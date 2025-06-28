@@ -13,11 +13,18 @@ const beds = [
 const FeatureProducts = () => {
   return (
     <div className="w-full px-4 py-8">
-      <div
+      {/* <div
         className="relative w-68 h-12 flex items-center justify-center bg-center bg-cover mb-6"
         style={{ backgroundImage: `url(${images.headingBg})` }}
       >
-        <h2 className="text-2xl font-bold text-black drop-shadow-md">Our Feature Products</h2>
+        <h2 className="main-heading">Our Feature Products</h2>
+      </div> */}
+      <div
+        className="relative w-64 h-12 flex items-center justify-center bg-center bg-cover mb-6"
+        style={{ backgroundImage: `url(${images.headingBg})` }}
+
+      >
+        <h2 className="main-heading">Feature Products</h2>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

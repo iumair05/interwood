@@ -24,7 +24,7 @@ const ExploreHome = () => {
         style={{ backgroundImage: `url(${images.headingBg})` }}
 
       >
-        <h2 className="text-2xl font-bold text-black drop-shadow-md">Explore Home</h2>
+        <h2 className="main-heading">Explore Home</h2>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

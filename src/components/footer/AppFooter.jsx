@@ -4,10 +4,12 @@ import React from 'react';
 import footerWave from "../../../public/images/svgs/footerWave.svg";
 import Link from 'next/link';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaTiktok } from 'react-icons/fa';
-import Image from 'next/image';
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const AppFooter = () => {
-    
+
     return (
         <div
             className="w-full"
@@ -62,19 +64,20 @@ const AppFooter = () => {
                     <p className="text-sm mb-3">
                         Subscribe to our newsletter to get the latest news and product updates directly to your email.
                     </p>
-                    <form className="flex items-center border border-white rounded overflow-hidden">
-                        <input
-                            type="email"
-                            placeholder="Enter your mail address"
-                            className="flex-grow px-3 py-2 text-black placeholder-gray-500 text-sm"
-                        />
-                        <button
-                            type="submit"
-                            className="bg-white text-black px-4 text-sm font-semibold"
-                        >
-                            →
-                        </button>
-                    </form>
+
+
+                    <TextField
+                        variant="standard"
+                        label="Email"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <ArrowForwardIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+
                 </div>
 
                 {/* CONTACT INFO */}

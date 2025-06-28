@@ -1,16 +1,17 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-    background-color: '#faf0e8';
+  @apply bg-primaryBg;
 }
 
 @layer components {
 
-    .custom-container {
-        @apply  max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8;
-    }
-    .mainBg {
-        @apply bg-['#faf0e8'];
-    }
-
+  .custm-container {
+    @apply max-w-[95vw] mx-auto my-6 sm:my-8 md:my-10 lg:my-12;
+  }
+  .main-heading {
+    @apply text-2xl font-bold text-black drop-shadow-md;
+  }
 }

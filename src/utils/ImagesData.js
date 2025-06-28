@@ -36,3 +36,10 @@ export const images = {
   discoverMoreImage: '/images/discoverMoreImage.png',
   footerBg: '/images/footerBg.png',
 }
+
+export const ModalSectionImages = {
+  chair1: '/images/modal-section/chair1.png',
+  chair2: '/images/modal-section/chair2.png',
+  chair3: '/images/modal-section/chair3.png',
+  chair4: '/images/modal-section/chair4.png',
+}
