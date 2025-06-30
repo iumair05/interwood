@@ -2,18 +2,18 @@
 import React from "react";
 import Image from "next/image";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { ExploreOfficeBrowseCategoryImages } from "@/utils/ImagesData";
+import { exploreOfficeBrowseCategoryImages } from "@/utils/ImagesData";
 
 const categories = [
-  { title: "Living Room Furniture", image: ExploreOfficeBrowseCategoryImages.Browse1 },
-  { title: "Bedroom Furniture", image: ExploreOfficeBrowseCategoryImages.Browse2 },
-  { title: "Dining Room Furniture", image: ExploreOfficeBrowseCategoryImages.Browse3 },
-  { title: "Home Office Furniture", image: ExploreOfficeBrowseCategoryImages.Browse4 },
-  { title: "Entryway Furniture", image: ExploreOfficeBrowseCategoryImages.Browse5 },
-  { title: "Kitchen Furniture", image: ExploreOfficeBrowseCategoryImages.Browse6 },
+  { title: "Living Room Furniture", image: exploreOfficeBrowseCategoryImages.Browse1 },
+  { title: "Bedroom Furniture", image: exploreOfficeBrowseCategoryImages.Browse2 },
+  { title: "Dining Room Furniture", image: exploreOfficeBrowseCategoryImages.Browse3 },
+  { title: "Home Office Furniture", image: exploreOfficeBrowseCategoryImages.Browse4 },
+  { title: "Entryway Furniture", image: exploreOfficeBrowseCategoryImages.Browse5 },
+  { title: "Kitchen Furniture", image: exploreOfficeBrowseCategoryImages.Browse6 },
 ];
 
-const BrowseCategories = () => {
+const OfficeCategories = () => {
   return (
     <div className="custom-container">
       <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
@@ -48,4 +48,4 @@ const BrowseCategories = () => {
   );
 };
 
-export default BrowseCategories;
+export default OfficeCategories;

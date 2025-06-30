@@ -3,22 +3,22 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { ExploreSectionImages, images } from '@/utils/ImagesData';
+import { exploreSectionImages, images } from '@/utils/ImagesData';
 
 const beds = [
-  { img: ExploreSectionImages.bed, name: 'Modern King Bed', price: '$799' },
-  { img: ExploreSectionImages.sofa, name: 'Classic Queen Bed', price: '$699' },
-  { img: ExploreSectionImages.chair, name: 'Stylish Twin Bed', price: '$499' },
-  { img: ExploreSectionImages.dining, name: 'Luxury Bed Frame', price: '$999' },
-  { img: ExploreSectionImages.wardrobe, name: 'Minimalist Bed', price: '$599' },
-  { img: ExploreSectionImages.table, name: 'Rustic Wooden Bed', price: '$849' },
+  { img: exploreSectionImages.bed, name: 'Modern King Bed', price: '$799' },
+  { img: exploreSectionImages.sofa, name: 'Classic Queen Bed', price: '$699' },
+  { img: exploreSectionImages.chair, name: 'Stylish Twin Bed', price: '$499' },
+  { img: exploreSectionImages.dining, name: 'Luxury Bed Frame', price: '$999' },
+  { img: exploreSectionImages.wardrobe, name: 'Minimalist Bed', price: '$599' },
+  { img: exploreSectionImages.table, name: 'Rustic Wooden Bed', price: '$849' },
 ];
 
 
 const ExploreHome = () => {
 
   return (
-    <div className="w-full px-4 py-8">
+    <div className="custom-container">
 
 
       <div

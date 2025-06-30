@@ -1,13 +1,13 @@
 'use client';
 
-import { ModalSectionImages } from '@/utils/ImagesData';
+import { modalSectionImages } from '@/utils/ImagesData';
 import Image from 'next/image';
 import React from 'react';
 import CanvasSection from './CanvasSection';
 
 const ModalSection = () => {
   return (
-    <div className="max-w-[90vw] mx-auto my-8">
+    <div className="custom-container">
       <h1 className="main-heading text-center">Experience the 3D Difference</h1>
       <p className="my-2 text-center text-primaryText">
         Unlock Your Creativity with Our Intuitive 3D Design Tool
@@ -17,28 +17,28 @@ const ModalSection = () => {
       <div className="md:hidden w-full flex justify-center my-4 overflow-x-auto">
         <section className="flex items-center gap-2">
           <Image
-            src={ModalSectionImages.chair1}
+            src={modalSectionImages.chair1}
             alt="chair picture"
             width={60}
             height={60}
             className="object-cover rounded"
           />
           <Image
-            src={ModalSectionImages.chair2}
+            src={modalSectionImages.chair2}
             alt="chair picture"
             width={60}
             height={60}
             className="object-cover rounded"
           />
           <Image
-            src={ModalSectionImages.chair3}
+            src={modalSectionImages.chair3}
             alt="chair picture"
             width={60}
             height={60}
             className="object-cover rounded"
           />
           <Image
-            src={ModalSectionImages.chair4}
+            src={modalSectionImages.chair4}
             alt="chair picture"
             width={60}
             height={60}
@@ -59,7 +59,7 @@ const ModalSection = () => {
               Visions to Life with
             </p>
             <Image
-              src={ModalSectionImages.chair1}
+              src={modalSectionImages.chair1}
               alt="chair picture"
               width={100}
               height={100}
@@ -75,7 +75,7 @@ const ModalSection = () => {
               Customizable 3D Furniture
             </p>
             <Image
-              src={ModalSectionImages.chair2}
+              src={modalSectionImages.chair2}
               alt="chair picture"
               width={100}
               height={100}
@@ -99,7 +99,7 @@ const ModalSection = () => {
               with Personalized 3D
             </p>
             <Image
-              src={ModalSectionImages.chair3}
+              src={modalSectionImages.chair3}
               alt="chair picture"
               width={100}
               height={100}
@@ -115,7 +115,7 @@ const ModalSection = () => {
               3D Furniture Design
             </p>
             <Image
-              src={ModalSectionImages.chair4}
+              src={modalSectionImages.chair4}
               alt="chair picture"
               width={100}
               height={100}

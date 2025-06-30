@@ -1,3 +1,4 @@
 export const routes = {
-    exploreHome: '/exploreHome',
+    exploreHome: '/explore-home',
+    exploreOffice: '/explore-office',
 }

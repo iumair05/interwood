@@ -6,31 +6,31 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { HeroSectionImages } from '@/utils/ImagesData'
+import { heroSectionImages } from '@/utils/ImagesData'
 
 const slides = [
   {
     id: 3,
-    web: HeroSectionImages.SummerSaleWeb,
-    mobile: HeroSectionImages.SummerSaleMobile,
+    web: heroSectionImages.SummerSaleWeb,
+    mobile: heroSectionImages.SummerSaleMobile,
     alt: 'Summer Sale'
   },
   {
     id: 1,
-    web: HeroSectionImages.BaadMayWeb,
-    mobile: HeroSectionImages.BaadMayMobile,
+    web: heroSectionImages.BaadMayWeb,
+    mobile: heroSectionImages.BaadMayMobile,
     alt: 'BaadMay'
   },
   {
     id: 2,
-    web: HeroSectionImages.CafeteriaWeb,
-    mobile: HeroSectionImages.CafeteriaMobile,
+    web: heroSectionImages.CafeteriaWeb,
+    mobile: heroSectionImages.CafeteriaMobile,
     alt: 'Cafeteria'
   },
   {
     id: 4,
-    web: HeroSectionImages.ViewFurnitureWeb,
-    mobile: HeroSectionImages.ViewFurnitureMobile,
+    web: heroSectionImages.ViewFurnitureWeb,
+    mobile: heroSectionImages.ViewFurnitureMobile,
     alt: 'View Furniture'
   }
 ]

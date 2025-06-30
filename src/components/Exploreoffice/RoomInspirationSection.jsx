@@ -2,20 +2,20 @@
 import React from 'react';
 import Image from 'next/image';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { RoomInspirationImages } from '@/utils/ImagesData';
+import { roomInspirationImages } from '@/utils/ImagesData';
 
 const rooms = [
   {
     title: 'Modern Living Room',
     description:
       'Clean lines and minimalist design create a calming space for relaxation and entertainment.',
-    image: RoomInspirationImages.Room1,
+    image: roomInspirationImages.Room1,
   },
   {
     title: 'Serene Bedroom',
     description:
       'Soft textures and neutral tones create the perfect sanctuary for restful sleep.',
-    image: RoomInspirationImages.Room2,
+    image: roomInspirationImages.Room2,
   },
 ];
 

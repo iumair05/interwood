@@ -1,15 +1,17 @@
 'use client';
 
 import CustomButton from '@/commons/CustomButton';
-import { ExploreOfficeImages } from '@/utils/ImagesData';
+import { exploreOfficeImages } from '@/utils/ImagesData';
+import { routes } from '@/utils/routes';
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const OfficeCollection = () => {
-    
-    const exploreRoute = '/explore-office'; 
+
+    const router = useRouter();
+
     
     return (
         <section className="bg-[#FAF0E8] py-12">
@@ -18,7 +20,7 @@ const OfficeCollection = () => {
                 {/* Left Side Image */}
                 <Box className="w-full relative md:w-1/2 h-[300px] md:h-[400px]">
                     <Image
-                        src={ExploreOfficeImages.OfficeCollection}
+                        src={exploreOfficeImages.OfficeCollection}
                         alt="Modern wooden bed with upholstered headboard"
                         fill
                         className="object-cover"
@@ -38,12 +40,13 @@ const OfficeCollection = () => {
                         unparalleled style and comfort.
                     </p>
 
-                    <Link href={exploreRoute} passHref>
+
                         <CustomButton
+                        onClick={() => router.push(routes.exploreOffice)}
                             text="Explore Now"
                             className='mt-6'
                         />
-                    </Link>
+
                 </div>
             </div>
         </section>

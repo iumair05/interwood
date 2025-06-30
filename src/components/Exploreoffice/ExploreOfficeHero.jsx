@@ -6,60 +6,61 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { ExploreOfficeBrowseCategoryImages } from '@/utils/ImagesData'
+import { exploreOfficeBrowseCategoryImages } from '@/utils/ImagesData'
 
 const slides = [
     {
       id: 1,
-      web: ExploreOfficeBrowseCategoryImages.Browse1,
-      mobile: ExploreOfficeBrowseCategoryImages.Browse1, // Add mobile versions if you have them
+      web: exploreOfficeBrowseCategoryImages.Browse1,
+      mobile: exploreOfficeBrowseCategoryImages.Browse1, // Add mobile versions if you have them
       alt: 'Summer Sale'
     },
     {
       id: 2,
-      web: ExploreOfficeBrowseCategoryImages.Browse2,
-      mobile: ExploreOfficeBrowseCategoryImages.Browse2,
+      web: exploreOfficeBrowseCategoryImages.Browse2,
+      mobile: exploreOfficeBrowseCategoryImages.Browse2,
       alt: 'BaadMay'
     },
     {
       id: 3,
-      web: ExploreOfficeBrowseCategoryImages.Browse3,
-      mobile: ExploreOfficeBrowseCategoryImages.Browse3,
+      web: exploreOfficeBrowseCategoryImages.Browse3,
+      mobile: exploreOfficeBrowseCategoryImages.Browse3,
       alt: 'Cafeteria'
     },
     {
       id: 4,
-      web: ExploreOfficeBrowseCategoryImages.Browse4,
-      mobile: ExploreOfficeBrowseCategoryImages.Browse4,
+      web: exploreOfficeBrowseCategoryImages.Browse4,
+      mobile: exploreOfficeBrowseCategoryImages.Browse4,
       alt: 'View Furniture'
     },
     {
       id: 5,
-      web: ExploreOfficeBrowseCategoryImages.Browse5,
-      mobile: ExploreOfficeBrowseCategoryImages.Browse5,
+      web: exploreOfficeBrowseCategoryImages.Browse5,
+      mobile: exploreOfficeBrowseCategoryImages.Browse5,
       alt: 'Image 5'
     },
     {
       id: 6,
-      web: ExploreOfficeBrowseCategoryImages.Browse6,
-      mobile: ExploreOfficeBrowseCategoryImages.Browse6,
+      web: exploreOfficeBrowseCategoryImages.Browse6,
+      mobile: exploreOfficeBrowseCategoryImages.Browse6,
       alt: 'Image 6'
     },
     {
       id: 7,
-      web: ExploreOfficeBrowseCategoryImages.Browse7,
-      mobile: ExploreOfficeBrowseCategoryImages.Browse7,
+      web: exploreOfficeBrowseCategoryImages.Browse7,
+      mobile: exploreOfficeBrowseCategoryImages.Browse7,
       alt: 'Image 7'
     },
     {
       id: 8,
-      web: ExploreOfficeBrowseCategoryImages.Browse8,
-      mobile: ExploreOfficeBrowseCategoryImages.Browse8,
+      web: exploreOfficeBrowseCategoryImages.Browse8,
+      mobile: exploreOfficeBrowseCategoryImages.Browse8,
       alt: 'Image 8'
     }
 ];
 
 const ExploreOfficeHeroSection = () => {
+
   return (
     <div className="w-full">
       <Swiper
@@ -148,6 +149,7 @@ const ExploreOfficeHeroSection = () => {
         }
         }
       `}</style>
+
     </div>
   )
 }

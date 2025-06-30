@@ -1,4 +1,4 @@
-export const HeroSectionImages = {
+export const heroSectionImages = {
   BaadMayWeb: '/images/hero-slides/baadmay-web.webp',
   BaadMayMobile: '/images/hero-slides/baadmay-mobile.webp',
   CafeteriaWeb: '/images/hero-slides/cafeteria-web.webp',
@@ -9,7 +9,7 @@ export const HeroSectionImages = {
   ViewFurnitureMobile: '/images/hero-slides/viewFurniture-mobile.webp',
 };
 
-export const ExploreSectionImages = {
+export const exploreSectionImages = {
   bed: '/images/home-furniture/bed.png',
   sofa: '/images/home-furniture/sofa.jpg',
   chair: '/images/home-furniture/chair.jpg',
@@ -18,7 +18,7 @@ export const ExploreSectionImages = {
   table: '/images/home-furniture/table.jpg',
 };
 
-export const ExploreOfficeImages = {
+export const exploreOfficeImages = {
   Office1: '/images/office-furniture/office1.png',
   Office2: '/images/office-furniture/office2.png',
   Office3: '/images/office-furniture/office3.png',
@@ -28,7 +28,7 @@ export const ExploreOfficeImages = {
   OfficeCollection: '/images/office-furniture/officeCollection.png',
 };
 
-export const ExploreOfficeBrowseCategoryImages = {
+export const exploreOfficeBrowseCategoryImages = {
   Browse1: '/images/office-furniture/browse1.png',
   Browse2: '/images/office-furniture/browse2.png',
   Browse3: '/images/office-furniture/browse3.png',
@@ -39,7 +39,7 @@ export const ExploreOfficeBrowseCategoryImages = {
   Browse8: '/images/office-furniture/browse8.png',
 }
 
-export const RoomInspirationImages = {
+export const roomInspirationImages = {
   Room1: '/images/office-furniture/roomInspiration1.png',
   Room2: '/images/office-furniture/roomInspiration2.png',
 }
@@ -53,7 +53,7 @@ export const images = {
   footerBg: '/images/footerBg.png',
 }
 
-export const ModalSectionImages = {
+export const modalSectionImages = {
   chair1: '/images/modal-section/chair1.png',
   chair2: '/images/modal-section/chair2.png',
   chair3: '/images/modal-section/chair3.png',

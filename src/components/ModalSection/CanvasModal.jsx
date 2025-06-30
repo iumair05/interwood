@@ -12,6 +12,7 @@ const modelPaths = [
 ];
 
 const CanvasModal = forwardRef((props, ref) => {
+  
   const group = useRef();
   const [currentModelIndex, setCurrentModelIndex] = useState(0);
   const [isInteracting, setIsInteracting] = useState(false);

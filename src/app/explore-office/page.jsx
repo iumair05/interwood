@@ -1,13 +1,2 @@
-
-import ExploreOffice from '@/screens/ExploreOffice'
-import React from 'react'
-
-const page = () => {
-  return (
-    <div>
-      <ExploreOffice />
-    </div>
-  )
-}
-
-export default page
+import ExploreHomePage from "@/screens/ExploreOfficePage";
+export default ExploreHomePage;
