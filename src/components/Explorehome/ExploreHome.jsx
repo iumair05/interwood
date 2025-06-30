@@ -19,6 +19,8 @@ const ExploreHome = () => {
 
   return (
     <div className="w-full px-4 py-8">
+
+
       <div
         className="relative w-60 h-12 flex items-center justify-center bg-center bg-cover mb-6"
         style={{ backgroundImage: `url(${images.headingBg})` }}
