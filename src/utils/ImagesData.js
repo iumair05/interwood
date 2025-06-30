@@ -43,3 +43,12 @@ export const ModalSectionImages = {
   chair3: '/images/modal-section/chair3.png',
   chair4: '/images/modal-section/chair4.png',
 }
+
+export const homeCategories = {
+  figma1: '/images/home-categories/figma1.png',
+  figma2: '/images/home-categories/figma2.png',
+  figma3: '/images/home-categories/figma3.png',
+  figma4: '/images/home-categories/figma4.png',
+  figma5: '/images/home-categories/figma5.png',
+  figma6: '/images/home-categories/figma6.png',
+}

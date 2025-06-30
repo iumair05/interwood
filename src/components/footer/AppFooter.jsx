@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import footerWave from "../../../public/images/svgs/footerWave.svg";
 import Link from 'next/link';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaTiktok } from 'react-icons/fa';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { images } from '@/utils/ImagesData';
 
 const AppFooter = () => {
 
@@ -14,8 +14,9 @@ const AppFooter = () => {
         <div
             className="w-full"
         >
+            <div className="max-w-7xl bg-[#b89d7e] text-white mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-8"
 
-            <div className="max-w-7xl bg-[#b89d7e] text-white mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            >
 
                 {/* INFORMATION */}
                 <div>

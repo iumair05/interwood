@@ -1,9 +1,13 @@
 import Image from 'next/image';
 import { Box, Button, Typography } from '@mui/material';
-
 import { images } from '@/utils/ImagesData';
+import { useRouter } from 'next/navigation';
+import { routes } from '@/utils/routes';
 
 export default function DiscoverMoreSection() {
+
+    const router = useRouter();
+
     return (
         <Box className="bg-[#F7EEE7] py-10">
 
@@ -27,6 +31,7 @@ export default function DiscoverMoreSection() {
                     <Button
                         variant="outlined"
                         size="large"
+                        onClick={() => router.push(routes.exploreHome)}
                         sx={{
                             alignSelf: 'start',
                             color: '#fff',
@@ -39,6 +44,7 @@ export default function DiscoverMoreSection() {
                     >
                         View Collection
                     </Button>
+
                 </Box>
 
                 {/* Image Section */}

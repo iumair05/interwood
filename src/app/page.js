@@ -14,7 +14,7 @@ export default function HomePage() {
 
 
   return (
-    <div className='bg-[#F7EEE7]'>
+    <div>
       <HeroSection />
       <ModalSection />
       <ExploreHome />

@@ -19,7 +19,7 @@ const Stars = ({ value }) =>
 
 const UserReviews = () => {
   return (
-    <section className="bg-[#F6F0EB] py-12 overflow-hidden">
+    <section className="bg-primaryBg py-12 overflow-hidden">
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Typography
