@@ -28,6 +28,22 @@ export const ExploreOfficeImages = {
   OfficeCollection: '/images/office-furniture/officeCollection.png',
 };
 
+export const ExploreOfficeBrowseCategoryImages = {
+  Browse1: '/images/office-furniture/browse1.png',
+  Browse2: '/images/office-furniture/browse2.png',
+  Browse3: '/images/office-furniture/browse3.png',
+  Browse4: '/images/office-furniture/browse4.png',
+  Browse5: '/images/office-furniture/browse5.png',
+  Browse6: '/images/office-furniture/browse6.png',
+  Browse7: '/images/office-furniture/browse7.png',
+  Browse8: '/images/office-furniture/browse8.png',
+}
+
+export const RoomInspirationImages = {
+  Room1: '/images/office-furniture/roomInspiration1.png',
+  Room2: '/images/office-furniture/roomInspiration2.png',
+}
+
 export const images = {
   Feaure1: '/images/feature1.png',
   Feaure2: '/images/feature2.png',
