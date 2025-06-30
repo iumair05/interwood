@@ -20,6 +20,7 @@ const CanvasSection = () => {
         controlsRef.current.update();
       }
     }, []);
+    
 
     return <OrbitControls ref={controlsRef} makeDefault enableZoom />;
   };
