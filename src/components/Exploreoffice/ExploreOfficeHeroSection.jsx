@@ -86,7 +86,7 @@ const ExploreOfficeHeroSection = () => {
                   src={slide.web}
                   alt={slide.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover bg-center bg-cover"
                   priority={slide.id === 1} 
                 />
               )}

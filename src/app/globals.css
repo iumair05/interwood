@@ -8,8 +8,8 @@ body {
 
 @layer components {
 
-  .custm-container {
-    @apply max-w-[95vw] mx-auto my-6 sm:my-8 md:my-10 lg:my-12;
+  .custom-container {
+    @apply md:max-w-[90vw] max-w-[90vw] mx-auto my-6 sm:my-8 md:my-10 lg:my-12;
   }
   .main-heading {
     @apply text-2xl font-bold text-black drop-shadow-md;
