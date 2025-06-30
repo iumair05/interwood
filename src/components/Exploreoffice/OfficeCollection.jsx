@@ -4,9 +4,12 @@ import CustomButton from '@/commons/CustomButton';
 import { ExploreOfficeImages } from '@/utils/ImagesData';
 import { Box } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const OfficeCollection = () => {
+    
+    const exploreRoute = '/explore-office'; 
     
     return (
         <section className="bg-[#FAF0E8] py-12">
@@ -35,12 +38,12 @@ const OfficeCollection = () => {
                         unparalleled style and comfort.
                     </p>
 
-                    <CustomButton
-                    text="Explore Now"
-                    onClick={() => alert('Explore Now clicked!')}
-                    className='mt-6'
-                    />
-
+                    <Link href={exploreRoute} passHref>
+                        <CustomButton
+                            text="Explore Now"
+                            className='mt-6'
+                        />
+                    </Link>
                 </div>
             </div>
         </section>

@@ -39,7 +39,7 @@ const materialTheme = createTheme({
     MuiInputAdornment: {
       styleOverrides: {
         root: {
-          color: 'white',
+          color: '#b2a191',
         },
       },
     },

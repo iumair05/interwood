@@ -4,7 +4,8 @@ import DiscoverMoreSection from '@/components/Explorehome/DiscoverMoreSection';
 import ExploreHome from '@/components/Explorehome/ExploreHome';
 import ExploreOffice from '@/components/Exploreoffice/ExploreOffice';
 import OfficeCollection from '@/components/Exploreoffice/OfficeCollection';
-import FeatureProducts from '@/components/FeatureProducts/FeatureProducts';
+import FeatureProducts from '@/components/featureProducts/FeatureProducts';
+
 import HeroSection from '@/components/HeroSection/HeroSection';
 import ModalSection from '@/components/ModalSection/ModalSection';
 import UserReviews from '@/components/UserReviews/UserReviews';
