@@ -69,3 +69,16 @@ export const homeCategories = {
   figma6: '/images/home-categories/figma6.png',
   homeImg: '/images/home-categories/home-img.png',
 }
+
+export const exploreSubCategoriesImages = {
+  category1: '/images/explore-sub-categories/category1.png',
+  category2: '/images/explore-sub-categories/category2.png',
+  category3: '/images/explore-sub-categories/category3.png',
+  category4: '/images/explore-sub-categories/category4.png',
+  category5: '/images/explore-sub-categories/category5.png',
+  category6: '/images/explore-sub-categories/category6.png',
+  category7: '/images/explore-sub-categories/category7.png',
+  category8: '/images/explore-sub-categories/category8.png',
+  roomPlannerImage: '/images/explore-sub-categories/roomPlanner.png',
+  subCategoryImg: '/images/explore-sub-categories/subCategory-img.png',
+}

@@ -31,7 +31,8 @@ export default function DiscoverMoreSection() {
                     <Button
                         variant="outlined"
                         size="large"
-                        onClick={() => router.push(routes.exploreHome)}
+                        onClick={() => router.push(`${routes.exploreCategory}?category=Home`)}
+
                         sx={{
                             alignSelf: 'start',
                             color: '#fff',

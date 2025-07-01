@@ -3,8 +3,8 @@ import axios from 'axios';
 
 const baseURL = `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1`;
 
-// Home Categories
-export async function fetchHomeCategories(query) {
+// Furniture Categories
+export async function fetchCategories(query) {
     const { data } = await axios.get('/category/allCategories', {
         baseURL,
         params: { query },
@@ -12,25 +12,26 @@ export async function fetchHomeCategories(query) {
     return data;
 }
 
-export function useRequestHomeCategories(query) {
+export function useRequestCategories(query) {
     return useQuery({
-        queryKey: ['homeCategories', query],
-        queryFn: () => fetchHomeCategories(query),
+        queryKey: ['categories', query],
+        queryFn: () => fetchCategories(query),
+        enabled: !!query,
     });
 }
 
-// Office Categories
-export async function fetchOfficeCategories(query) {
-    const { data } = await axios.get('/category/allCategories', {
+// SubCategories API
+export async function fetchSubCategoriesChild(subCategoryId) {
+    const { data } = await axios.get(`/subcategory/${subCategoryId}`, {
         baseURL,
-        params: { query },
     });
     return data;
 }
 
-export function useRequestOfficeCategories(query) {
+export function useRequestSubCategoriesChild(subCategoryId) {
     return useQuery({
-        queryKey: ['homeCategories', query],
-        queryFn: () => fetchHomeCategories(query),
+        queryKey: ['subCategories', subCategoryId],
+        queryFn: () => fetchSubCategoriesChild(subCategoryId),
+        enabled: !!subCategoryId,
     });
 }

@@ -1,11 +1,11 @@
 import HeroPage from "@/commons/PageHero";
-import HomeCategories from "@/components/ExploreHome/HomeCategories";
-import NewsletterSignup from "@/components/ExploreOffice/NewsletterSignup";
-import RoomInspirationSection from "@/components/ExploreOffice/RoomInspirationSection";
+import ExploreCategory from "@/components/ExploreCategory/ExploreCategory";
+import NewsletterSignup from "@/components/ExploreCategory/NewsletterSignup";
+import RoomInspirationSection from "@/components/ExploreCategory/RoomInspirationSection";
 import { homeCategories } from "@/utils/ImagesData";
 
 
-const ExploreOfficePage = () => {
+const ExploreCategoryPage = () => {
   return (
     <div>
       <HeroPage
@@ -13,11 +13,11 @@ const ExploreOfficePage = () => {
         title={<>Furnish Every Corner of <br /> Your Home</>}
         description="Browse by room, category, and style to discover your perfect piece."
       />
-      <HomeCategories />
+      <ExploreCategory />
       <RoomInspirationSection />
       <NewsletterSignup />
     </div>
   )
 }
 
-export default ExploreOfficePage;
+export default ExploreCategoryPage;

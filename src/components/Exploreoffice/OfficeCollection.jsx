@@ -42,7 +42,7 @@ const OfficeCollection = () => {
 
 
                         <CustomButton
-                        onClick={() => router.push(routes.exploreOffice)}
+                        onClick={() => router.push(`${routes.exploreCategory}?category=Office`)}
                             text="Explore Now"
                             className='mt-6'
                         />
