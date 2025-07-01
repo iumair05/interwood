@@ -17,6 +17,7 @@ import RateReviewIcon from '@mui/icons-material/RateReview';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Link from 'next/link';
 
 const navIcons = {
   Home: <HomeIcon />,
@@ -99,7 +100,7 @@ const Header = () => {
   return (
     <header className="w-full sticky top-0 z-50 flex justify-between items-center px-6 py-4 shadow-md bg-white">
 
-      <div className="font-bold text-xl">Logo</div>
+      <Link href="/" className="font-bold text-xl">Logo</Link>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-8">

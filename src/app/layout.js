@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 import { ThemeProvider } from "@mui/material";
 import materialTheme from "@/providers/materialTheme";
 import AppFooter from "@/components/Footer/AppFooter";
+import { QueryClientProvider } from "@/providers/QueryClientProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +27,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primaryBg`}
       >
-        <ThemeProvider theme={materialTheme}>
-        <Header />
-        {children}
-        <AppFooter />
-        </ThemeProvider>
+        <QueryClientProvider>
+          <ThemeProvider theme={materialTheme}>
+            <Header />
+            {children}
+            <AppFooter />
+          </ThemeProvider>
+        </QueryClientProvider>
       </body>
     </html>
   );

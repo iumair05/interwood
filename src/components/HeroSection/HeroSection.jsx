@@ -11,26 +11,26 @@ import { heroSectionImages } from '@/utils/ImagesData'
 const slides = [
   {
     id: 3,
-    web: heroSectionImages.SummerSaleWeb,
-    mobile: heroSectionImages.SummerSaleMobile,
+    web: heroSectionImages.summerSaleWeb,
+    mobile: heroSectionImages.summerSaleMobile,
     alt: 'Summer Sale'
   },
   {
     id: 1,
-    web: heroSectionImages.BaadMayWeb,
-    mobile: heroSectionImages.BaadMayMobile,
+    web: heroSectionImages.baadMayWeb,
+    mobile: heroSectionImages.baadMayMobile,
     alt: 'BaadMay'
   },
   {
     id: 2,
-    web: heroSectionImages.CafeteriaWeb,
-    mobile: heroSectionImages.CafeteriaMobile,
+    web: heroSectionImages.cafeteriaWeb,
+    mobile: heroSectionImages.cafeteriaMobile,
     alt: 'Cafeteria'
   },
   {
     id: 4,
-    web: heroSectionImages.ViewFurnitureWeb,
-    mobile: heroSectionImages.ViewFurnitureMobile,
+    web: heroSectionImages.viewFurnitureWeb,
+    mobile: heroSectionImages.viewFurnitureMobile,
     alt: 'View Furniture'
   }
 ]

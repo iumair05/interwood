@@ -1,12 +1,12 @@
 export const heroSectionImages = {
-  BaadMayWeb: '/images/hero-slides/baadmay-web.webp',
-  BaadMayMobile: '/images/hero-slides/baadmay-mobile.webp',
-  CafeteriaWeb: '/images/hero-slides/cafeteria-web.webp',
-  CafeteriaMobile: '/images/hero-slides/cafeteria-mobile.webp',
-  SummerSaleWeb: '/images/hero-slides/summerSale-web.webp',
-  SummerSaleMobile: '/images/hero-slides/summerSale-mobile.webp',
-  ViewFurnitureWeb: '/images/hero-slides/viewFurniture-web.webp',
-  ViewFurnitureMobile: '/images/hero-slides/viewFurniture-mobile.webp',
+  baadMayWeb: '/images/hero-slides/baadmay-web.webp',
+  baadMayMobile: '/images/hero-slides/baadmay-mobile.webp',
+  cafeteriaWeb: '/images/hero-slides/cafeteria-web.webp',
+  cafeteriaMobile: '/images/hero-slides/cafeteria-mobile.webp',
+  summerSaleWeb: '/images/hero-slides/summerSale-web.webp',
+  summerSaleMobile: '/images/hero-slides/summerSale-mobile.webp',
+  viewFurnitureWeb: '/images/hero-slides/viewFurniture-web.webp',
+  viewFurnitureMobile: '/images/hero-slides/viewFurniture-mobile.webp',
 };
 
 export const exploreSectionImages = {
@@ -19,35 +19,35 @@ export const exploreSectionImages = {
 };
 
 export const exploreOfficeImages = {
-  Office1: '/images/office-furniture/office1.png',
-  Office2: '/images/office-furniture/office2.png',
-  Office3: '/images/office-furniture/office3.png',
-  Office4: '/images/office-furniture/office4.png',
-  Office5: '/images/office-furniture/office5.png',
-  Office6: '/images/office-furniture/office6.png',
-  OfficeCollection: '/images/office-furniture/officeCollection.png',
+  office1: '/images/office-furniture/office1.png',
+  office2: '/images/office-furniture/office2.png',
+  office3: '/images/office-furniture/office3.png',
+  office4: '/images/office-furniture/office4.png',
+  office5: '/images/office-furniture/office5.png',
+  office6: '/images/office-furniture/office6.png',
+  officeCollection: '/images/office-furniture/officeCollection.png',
 };
 
 export const exploreOfficeBrowseCategoryImages = {
-  Browse1: '/images/office-furniture/browse1.png',
-  Browse2: '/images/office-furniture/browse2.png',
-  Browse3: '/images/office-furniture/browse3.png',
-  Browse4: '/images/office-furniture/browse4.png',
-  Browse5: '/images/office-furniture/browse5.png',
-  Browse6: '/images/office-furniture/browse6.png',
-  Browse7: '/images/office-furniture/browse7.png',
-  Browse8: '/images/office-furniture/browse8.png',
+  browse1: '/images/office-furniture/browse1.png',
+  browse2: '/images/office-furniture/browse2.png',
+  browse3: '/images/office-furniture/browse3.png',
+  browse4: '/images/office-furniture/browse4.png',
+  browse5: '/images/office-furniture/browse5.png',
+  browse6: '/images/office-furniture/browse6.png',
+  browse7: '/images/office-furniture/browse7.png',
+  browse8: '/images/office-furniture/browse8.png',
 }
 
 export const roomInspirationImages = {
-  Room1: '/images/office-furniture/roomInspiration1.png',
-  Room2: '/images/office-furniture/roomInspiration2.png',
+  room1: '/images/office-furniture/roomInspiration1.png',
+  room2: '/images/office-furniture/roomInspiration2.png',
 }
 
 export const images = {
-  Feaure1: '/images/feature1.png',
-  Feaure2: '/images/feature2.png',
-  Feaure3: '/images/feature3.png',
+  feaure1: '/images/feature1.png',
+  feaure2: '/images/feature2.png',
+  feaure3: '/images/feature3.png',
   headingBg: '/images/headingBg.png',
   discoverMoreImage: '/images/discoverMoreImage.png',
   footerBg: '/images/footerBg.png',
@@ -67,4 +67,5 @@ export const homeCategories = {
   figma4: '/images/home-categories/figma4.png',
   figma5: '/images/home-categories/figma5.png',
   figma6: '/images/home-categories/figma6.png',
+  homeImg: '/images/home-categories/home-img.png',
 }

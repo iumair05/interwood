@@ -20,7 +20,7 @@ const OfficeCollection = () => {
                 {/* Left Side Image */}
                 <Box className="w-full relative md:w-1/2 h-[300px] md:h-[400px]">
                     <Image
-                        src={exploreOfficeImages.OfficeCollection}
+                        src={exploreOfficeImages.officeCollection}
                         alt="Modern wooden bed with upholstered headboard"
                         fill
                         className="object-cover"

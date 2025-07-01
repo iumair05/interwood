@@ -1,16 +1,19 @@
-import ExploreOfficeHero from '@/components/ExploreOffice/ExploreOfficeHero'
-import FindYourStyle from '@/components/ExploreOffice/FindYourStyle'
+import HeroPage from '@/commons/PageHero'
 import NewsletterSignup from '@/components/ExploreOffice/NewsletterSignup'
 import OfficeCategories from '@/components/ExploreOffice/OfficeCategories'
 import RoomInspirationSection from '@/components/ExploreOffice/RoomInspirationSection'
+import { homeCategories } from '@/utils/ImagesData'
 import React from 'react'
 
 const ExploreHomePage = () => {
   return (
     <div>
-      <ExploreOfficeHero />
+      <HeroPage
+        imageUrl={homeCategories.homeImg}
+        title={<>Furnish Every Corner of <br /> Your Home</>}
+        description="Browse by room, category, and style to discover your perfect piece."
+      />
       <OfficeCategories />
-      <FindYourStyle />
       <RoomInspirationSection />
       <NewsletterSignup />
     </div>

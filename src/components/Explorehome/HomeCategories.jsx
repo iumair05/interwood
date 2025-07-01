@@ -1,50 +1,62 @@
+'use client';
 
-import { homeCategories } from '@/utils/ImagesData';
+import React from 'react';
 import Image from 'next/image';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import React from 'react';
+import { useRequestHomeCategories } from '@/api/user';
+import { Loading } from '@/commons/Loading';
 
 const HomeCategories = () => {
 
-    const categories = [
-        { img: homeCategories.figma1, name: 'Yellow' },
-        { img: homeCategories.figma2, name: 'Blue Couch' },
-        { img: homeCategories.figma3, name: 'Modern' },
-        { img: homeCategories.figma4, name: 'Elegant' },
-        { img: homeCategories.figma5, name: 'Sleek' },
-        { img: homeCategories.figma6, name: 'Minimalist' },
-    ];
+    const { data, isLoading, isError } = useRequestHomeCategories("Home");
+
+    if (isError) return <div>Failed to load categories.</div>;
+
+    const categories = data?.data || [];
 
     return (
         <div className="custom-container">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
-                Browse Categories
+                Home Categories
             </h2>
+            {isLoading ? (
+                <div className='flex justify-center h-[300px]'>
+                    <Loading />
+                </div>
+            ) : (
+                categories.map((category) => (
+                    <div key={category.id} className="mb-10">
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-                {categories.map((category, index) => (
-                    <div
-                        key={index}
-                        className="flex flex-col bg-white rounded-lg shadow hover:shadow-lg overflow-hidden transition duration-200 cursor-pointer"
-                    >
-                        {/* Image */}
-                        <div className="relative w-full h-[220px]">
-                            <Image
-                                src={category.img}
-                                alt={category.name}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
+                        {/* Subcategories */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                            {category.subcategories.map((subcategory) => (
+                                <div
+                                    key={subcategory.id}
+                                    className="flex flex-col bg-white rounded-lg shadow hover:shadow-lg overflow-hidden transition duration-200 cursor-pointer"
+                                >
+                                    {/* Image */}
+                                    <div className="relative w-full h-[220px]">
+                                        <Image
+                                            src={subcategory.image}
+                                            alt={subcategory.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
 
-                        {/* Name and Arrow */}
-                        <div className="flex items-center justify-between px-4 py-3">
-                            <span className="text-[#222] font-medium">{category.name}</span>
-                            <ArrowForwardIcon className="text-gray-500" />
+                                    {/* Name and Arrow */}
+                                    <div className="flex items-center justify-between px-4 py-3">
+                                        <span className="text-[#222] font-medium">{subcategory.name}</span>
+                                        <ArrowForwardIcon className="text-gray-500" />
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                ))}
-            </div>
+                ))
+            )
+            }
+
         </div>
     );
 };

@@ -5,12 +5,12 @@ import Image from 'next/image';
 import { exploreOfficeImages, images } from '@/utils/ImagesData';
 
 const beds = [
-  { img: exploreOfficeImages.Office1, name: 'Yellow', price: '$799' },
-  { img: exploreOfficeImages.Office2, name: 'Blue Couch', price: '$699' },
-  { img: exploreOfficeImages.Office3, name: 'Modern', price: '$499' },
-  { img: exploreOfficeImages.Office4, name: 'Elegant', price: '$999' },
-  { img: exploreOfficeImages.Office5, name: 'Sleek', price: '$599' },
-  { img: exploreOfficeImages.Office6, name: 'Minimalist', price: '$849' },
+  { img: exploreOfficeImages.office1, name: 'Yellow', price: '$799' },
+  { img: exploreOfficeImages.office2, name: 'Blue Couch', price: '$699' },
+  { img: exploreOfficeImages.office3, name: 'Modern', price: '$499' },
+  { img: exploreOfficeImages.office4, name: 'Elegant', price: '$999' },
+  { img: exploreOfficeImages.office5, name: 'Sleek', price: '$599' },
+  { img: exploreOfficeImages.office6, name: 'Minimalist', price: '$849' },
 ];
 
 

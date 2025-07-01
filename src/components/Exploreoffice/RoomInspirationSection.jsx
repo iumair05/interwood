@@ -9,13 +9,13 @@ const rooms = [
     title: 'Modern Living Room',
     description:
       'Clean lines and minimalist design create a calming space for relaxation and entertainment.',
-    image: roomInspirationImages.Room1,
+    image: roomInspirationImages.room1,
   },
   {
     title: 'Serene Bedroom',
     description:
       'Soft textures and neutral tones create the perfect sanctuary for restful sleep.',
-    image: roomInspirationImages.Room2,
+    image: roomInspirationImages.room2,
   },
 ];
 

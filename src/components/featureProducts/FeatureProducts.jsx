@@ -6,9 +6,9 @@ import { images } from '@/utils/ImagesData';
 
 const beds = [
 
-  { img: images.Feaure1, name: "Feature 1" },
-  { img: images.Feaure2, name: "Feature 2" },
-  { img: images.Feaure3, name: "Feature 3" }
+  { img: images.feaure1, name: "Feature 1" },
+  { img: images.feaure2, name: "Feature 2" },
+  { img: images.feaure3, name: "Feature 3" }
 ];
 
 const FeatureProducts = () => {
