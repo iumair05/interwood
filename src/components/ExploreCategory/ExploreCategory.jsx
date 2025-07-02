@@ -59,6 +59,7 @@ const ExploreCategory = () => {
                                 </Link>
                             ))}
                         </div>
+                        
                     </div>
                 ))
             )
