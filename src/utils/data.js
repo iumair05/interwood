@@ -28,3 +28,36 @@ export const reviews = [
     avatar: 'https://ntvb.tmsimg.com/assets/assets/163901_v9_ba.jpg',
   },
 ];
+
+export const sofaProducts = [
+  {
+    id: 1,
+    name: 'Convertible Sofa Bed',
+    image: '/images/sub-categories-products/subProduct1.png', 
+    rating: 4.8,
+    reviews: 840,
+    price: 799,
+    oldPrice: 899,
+    badge: 'New',
+  },
+  {
+    id: 2,
+    name: 'Modern Tufted Sofa',
+    image: '/images/sub-categories-products/subProduct2.png',
+    rating: 4.6,
+    reviews: 1020,
+    price: 899,
+    oldPrice: 1120,
+    badge: 'Best Seller',
+  },
+  {
+    id: 3,
+    name: 'Contemporary Sectional Sofa',
+    image: '/images/sub-categories-products/subProduct3.png',
+    rating: 4.5,
+    reviews: 630,
+    price: 1499,
+    oldPrice: 1899,
+    badge: null,
+  },
+]

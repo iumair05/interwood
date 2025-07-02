@@ -6,10 +6,10 @@ import HeroPage from '@/commons/PageHero';
 import { exploreSubCategoriesImages, roomInspirationImages } from '@/utils/ImagesData';
 import Image from 'next/image';
 import React from 'react'
-
+import { useRouter } from 'next/navigation';
 
 const SubCategoryPage = ({ params }) => {
-
+    const router = useRouter();
     const { subCategoryId } = params;
 
     console.log("subCategoryId--", subCategoryId);
@@ -61,7 +61,7 @@ const SubCategoryPage = ({ params }) => {
                                 <h3 className="text-base font-medium text-[#333] mb-2">
                                     {cat.name}
                                 </h3>
-                                <button className="text-sm text-[#7c5e3c] font-semibold hover:underline">
+                                <button className="text-sm text-[#7c5e3c] font-semibold hover:underline" onClick={() => router.push(`/explore-category/${subCategoryId}/${cat.id}`)}>
                                     View Collection →
                                 </button>
                             </div>
