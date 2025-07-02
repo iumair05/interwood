@@ -3,8 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import { ThemeProvider } from "@mui/material";
 import materialTheme from "@/providers/materialTheme";
-import AppFooter from "@/components/Footer/AppFooter";
 import { QueryClientProvider } from "@/providers/QueryClientProvider";
+import AppFooter from "@/components/footer/AppFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

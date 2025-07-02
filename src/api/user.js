@@ -35,3 +35,35 @@ export function useRequestSubCategoriesChild(subCategoryId) {
         enabled: !!subCategoryId,
     });
 }
+
+// SubCategoryChild Product
+export async function fetchSubCategoryChildProducts(subCategoryChildId) {
+    const { data } = await axios.get(`/subcategory_child/${subCategoryChildId}`, {
+        baseURL,
+    });
+    return data;
+}
+
+export function useRequestSubCategoryChildProducts(subCategoryChildId) {
+    return useQuery({
+        queryKey: ['subCategories', subCategoryChildId],
+        queryFn: () => fetchSubCategoryChildProducts(subCategoryChildId),
+        enabled: !!subCategoryChildId,
+    });
+}
+
+// Product Details
+export async function fetchProductDetails(productId) {
+    const { data } = await axios.get(`/subcategory_child/${productId}`, {
+        baseURL,
+    });
+    return data;
+}
+
+export function useRequestProductDetails(productId) {
+    return useQuery({
+        queryKey: ['subCategories', productId],
+        queryFn: () => fetchProductDetails(productId),
+        enabled: !!productId,
+    });
+}

@@ -2,13 +2,12 @@ import { roomInspirationImages } from '@/utils/ImagesData';
 import Image from 'next/image';
 import React from 'react'
 
-const RoomDecoration = ({subCategory}) => {
+const RoomDecoration = () => {
 
-    console.log(subCategory)
     return (
         <>
             <h2 className="main-heading text-center mt-10 mb-2">
-                Find Your {subCategory?.name} Style
+                Find Your Room Style
             </h2>
 
             <p className="text-primaryText text-center">
