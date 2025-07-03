@@ -1,14 +1,28 @@
 'use client'
 
 import Image from 'next/image'
-import { Rating, Chip } from '@mui/material'
-import { useDispatch } from 'react-redux'
-import CustomButton from '@/commons/CustomButton'
+import { Rating, Chip, Button } from '@mui/material'
 import OutlineButton from '@/commons/OutlineButton'
+import CustomButton from '@/commons/CustomButton'
+import { useParams, useRouter } from 'next/navigation'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { addToCart } from '@/redux/CartSlice'
 
 const ProductCard = ({ product }) => {
+
   const dispatch = useDispatch()
+
+  const router = useRouter()
+  const params = useParams()
+  
+  useEffect(() => {
+    console.log('Route params:', params)
+    if (params.subCategoryId && params.subCategoryProducts) {
+      console.log('subCategoryId:', params.subCategoryId)
+      console.log('subCategoryProducts:', params.subCategoryProducts)
+    }
+  }, [params])
 
   const chipColor =
     product.badge === 'New'
@@ -22,7 +36,7 @@ const ProductCard = ({ product }) => {
   }
 
   const handleProductDetails = () => {
-    // logic to view product details
+    router.push(`/explore-category/${params.subCategoryId}/${params.subCategoryProducts}/${product.id}`)
   }
 
   return (

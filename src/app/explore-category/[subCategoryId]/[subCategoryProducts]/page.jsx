@@ -38,22 +38,22 @@ const SubCategoryProductPage = () => {
           </div>
         ) : (
           <div className="grid gap-8 mt-14 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                {products.map((product) => (
-                  <ProductCard
-                    key={product.id}
-                    product={{
-                      id: product.id,
-                      name: product.name,
-                      image: product.thumnail,
-                      price: product.price,
-                      rating: 4.5,          // Static placeholder
-                      reviews: 120,          // Static placeholder
-                      oldPrice: product.price + 2000,  // Fake old price
-                      badge: 'New',          // Static badge
-                    }}
-                  />
-                ))}
-              </div>
+            {products.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={{
+                  id: product.id,
+                  name: product.name,
+                  image: product.thumnail,
+                  price: product.price,
+                  rating: 4.5,
+                  reviews: 120,
+                  oldPrice: product.price + 2000,
+                  badge: 'New',
+                }}
+              />
+            ))}
+          </div>
         )}
       </section>
     </div>

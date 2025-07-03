@@ -62,7 +62,7 @@ export async function fetchProductDetails(productId) {
 
 export function useRequestProductDetails(productId) {
     return useQuery({
-        queryKey: ['productDetails', productId],
+        queryKey: ['product', productId],
         queryFn: () => fetchProductDetails(productId),
         enabled: !!productId,
     });
