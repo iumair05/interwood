@@ -2,12 +2,22 @@
 
 import Image from 'next/image'
 import { Rating, Chip, Button } from '@mui/material'
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined'
 import OutlineButton from '@/commons/OutlineButton'
 import CustomButton from '@/commons/CustomButton'
+import { useParams, useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 const ProductCard = ({ product }) => {
+  const router = useRouter()
+  const params = useParams()
+  
+  useEffect(() => {
+    console.log('Route params:', params)
+    if (params.subCategoryId && params.subCategoryProducts) {
+      console.log('subCategoryId:', params.subCategoryId)
+      console.log('subCategoryProducts:', params.subCategoryProducts)
+    }
+  }, [params])
 
   const chipColor =
     product.badge === 'New'
@@ -17,12 +27,11 @@ const ProductCard = ({ product }) => {
       : 'default'
 
   const handleProductDetails = () => {
-
-  } 
+    router.push(`/explore-category/${params.subCategoryId}/${params.subCategoryProducts}/${product.id}`)
+  }
 
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col">
-
       <div className="relative">
         <Image
           src={product.image}

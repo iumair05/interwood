@@ -54,7 +54,7 @@ export function useRequestSubCategoryChildProducts(subCategoryChildId) {
 
 // Product Details
 export async function fetchProductDetails(productId) {
-    const { data } = await axios.get(`/subcategory_child/${productId}`, {
+    const { data } = await axios.get(`/product/${productId}`, {
         baseURL,
     });
     return data;
@@ -62,7 +62,7 @@ export async function fetchProductDetails(productId) {
 
 export function useRequestProductDetails(productId) {
     return useQuery({
-        queryKey: ['subCategories', productId],
+        queryKey: ['product', productId],
         queryFn: () => fetchProductDetails(productId),
         enabled: !!productId,
     });

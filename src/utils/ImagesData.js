@@ -82,3 +82,12 @@ export const exploreSubCategoriesImages = {
   roomPlannerImage: '/images/explore-sub-categories/roomPlanner.png',
   subCategoryImg: '/images/explore-sub-categories/subCategory-img.png',
 }
+
+export const productDetailImages = {
+  mainImage: '/images/product-detail/mainImage.png',
+  firstImage: '/images/product-detail/firstImage.png',
+  secondImage: '/images/product-detail/secondImage.png',
+  thirdImage: '/images/product-detail/thirdImage.png',
+  fourthImage: '/images/product-detail/fourthImage.png', 
+  profileImage: '/images/product-detail/profile.jpeg',                                                 
+}
