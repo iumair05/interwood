@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material";
 import materialTheme from "@/providers/materialTheme";
 import { QueryClientProvider } from "@/providers/QueryClientProvider";
 import AppFooter from "@/components/footer/AppFooter";
+import { ReduxProvider } from "@/providers/ReduxProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primaryBg`}
       >
+        <ReduxProvider>
         <QueryClientProvider>
           <ThemeProvider theme={materialTheme}>
             <Header />
@@ -34,6 +36,7 @@ export default function RootLayout({ children }) {
             <AppFooter />
           </ThemeProvider>
         </QueryClientProvider>
+        </ReduxProvider>
       </body>
     </html>
   );

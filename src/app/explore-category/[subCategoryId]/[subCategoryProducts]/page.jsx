@@ -8,10 +8,14 @@ import { exploreSubCategoriesImages } from '@/utils/ImagesData';
 import { useParams } from 'next/navigation';
 
 const SubCategoryProductPage = () => {
+
   const params = useParams();
+  
   const { subCategoryProducts } = params;
 
   const { data, isLoading } = useRequestSubCategoryChildProducts(subCategoryProducts);
+
+  console.log('data---', data);
 
   const products = data?.data?.products || [];
 

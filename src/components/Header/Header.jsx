@@ -8,6 +8,7 @@ import {
   Menu,
   MenuItem,
   Collapse,
+  Badge,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -17,7 +18,12 @@ import RateReviewIcon from '@mui/icons-material/RateReview';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import PersonIcon from '@mui/icons-material/Person';
+
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import { routes } from '@/utils/routes';
 const navIcons = {
   Home: <HomeIcon />,
   Office: <BusinessIcon />,
@@ -79,6 +85,9 @@ const officeDropdownSections = [
   },
 ];
 const Header = () => {
+
+  const { items } = useSelector(state => state.cart);
+
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [anchorElHome, setAnchorElHome] = useState(null);
   const [anchorElOffice, setAnchorElOffice] = useState(null);
@@ -217,6 +226,28 @@ const Header = () => {
         >
           3D Build
         </Button>
+
+        <div className="flex items-center space-x-2">
+          <IconButton>
+            <PersonIcon className="cursor-pointer" />
+          </IconButton>
+
+          {/* <IconButton>
+            <Badge badgeContent={items.length} color="error" size="small">
+              <ShoppingCartIcon className="cursor-pointer" />
+            </Badge>
+          </IconButton> */}
+
+          <Link href={`${routes.cart}`}>
+            <IconButton>
+              <Badge badgeContent={items.length} color="error" size="small">
+                <ShoppingCartIcon className="cursor-pointer" />
+              </Badge>
+            </IconButton>
+          </Link>
+
+        </div>
+
       </div>
       {/* Mobile Menu Icon */}
       <div className="md:hidden">

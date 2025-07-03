@@ -1,13 +1,14 @@
 'use client'
 
 import Image from 'next/image'
-import { Rating, Chip, Button } from '@mui/material'
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined'
-import OutlineButton from '@/commons/OutlineButton'
+import { Rating, Chip } from '@mui/material'
+import { useDispatch } from 'react-redux'
 import CustomButton from '@/commons/CustomButton'
+import OutlineButton from '@/commons/OutlineButton'
+import { addToCart } from '@/redux/CartSlice'
 
 const ProductCard = ({ product }) => {
+  const dispatch = useDispatch()
 
   const chipColor =
     product.badge === 'New'
@@ -16,13 +17,16 @@ const ProductCard = ({ product }) => {
       ? 'success'
       : 'default'
 
-  const handleProductDetails = () => {
+  const handleAddToCart = () => {
+    dispatch(addToCart(product))
+  }
 
-  } 
+  const handleProductDetails = () => {
+    // logic to view product details
+  }
 
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col">
-
       <div className="relative">
         <Image
           src={product.image}
@@ -37,12 +41,7 @@ const ProductCard = ({ product }) => {
             label={product.badge}
             color={chipColor}
             size="small"
-            sx={{
-              position: 'absolute',
-              top: 12,
-              right: 12,
-              fontWeight: 600,
-            }}
+            sx={{ position: 'absolute', top: 12, right: 12, fontWeight: 600 }}
           />
         )}
       </div>
@@ -67,14 +66,13 @@ const ProductCard = ({ product }) => {
         <div className="mt-auto grid grid-cols-2 gap-3">
           <CustomButton
             text="Add to Cart"
-            fullWidth
+            onClick={handleAddToCart}
           />
 
           <OutlineButton
             onClick={handleProductDetails}
             text="View Details"
             variant="outlined"
-            fullWidth
           />
         </div>
       </div>
