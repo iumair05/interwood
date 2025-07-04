@@ -25,12 +25,12 @@ import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { routes } from '@/utils/routes';
 const navIcons = {
-  Home: <HomeIcon />,
-  Office: <BusinessIcon />,
-  Reviews: <RateReviewIcon />,
-  Contact: <ContactMailIcon />,
+  Home: { icon: <HomeIcon />, path: '/' },
+  Office: { icon: <BusinessIcon />, path: '/office' },
+  // Reviews: { icon: <RateReviewIcon />, path: '/reviews' },
+  Contact: { icon: <ContactMailIcon />, path: '/contact' },
 };
-// HOME: Menu structured in categories
+
 const homeDropdownSections = [
   {
     title: 'Bedroom',
@@ -57,7 +57,7 @@ const homeDropdownSections = [
     items: ['Kids Single Beds', 'Kids Bunk Beds'],
   },
 ];
-// OFFICE: Menu structured in categories
+
 const officeDropdownSections = [
   {
     title: 'Workspaces',
@@ -101,153 +101,152 @@ const Header = () => {
   return (
     <header className="w-full sticky top-0 z-50 flex justify-between items-center px-6 py-4 shadow-md bg-white">
       <Link href="/" className="font-bold text-xl">Logo</Link>
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center space-x-8">
-        <nav className="flex space-x-8 items-center">
-          {/* Home Dropdown */}
-          <div
-            onMouseEnter={(e) => setAnchorElHome(e.currentTarget)}
-            onMouseLeave={() => setAnchorElHome(null)}
-            className="relative"
-          >
-            <Button
-              endIcon={<KeyboardArrowDownIcon />}
-              sx={{ color: 'gray', textTransform: 'none' }}
+      
+      <div className="hidden md:flex items-center justify-between w-full">
+        
+        <div className="w-1/3"></div>
+        <div className="flex-1 flex justify-center">
+          <nav className="flex space-x-8 items-center">
+            {/* Home Dropdown */}
+            <div
+              onMouseEnter={(e) => setAnchorElHome(e.currentTarget)}
+              onMouseLeave={() => setAnchorElHome(null)}
+              className="relative"
             >
-              Home
-            </Button>
-            <Menu
-              anchorEl={anchorElHome}
-              open={openHomeMenu}
-              onClose={() => setAnchorElHome(null)}
-              MenuListProps={{ onMouseLeave: () => setAnchorElHome(null) }}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'center',
-              }}
-              transformOrigin={{
-                vertical: 'left',
-                horizontal: 'center',
-              }}
-              sx={{
-                '& .MuiPaper-root': {
-                  width: '100%',
-                  maxWidth: '72rem',
-                  margin: 'auto',
-                  padding: '1.5rem',
-                  backgroundColor: '#fff',
-                  boxShadow: '0px 4px 12px rgba(0,0,0,0.1)',
-                },
-              }}
-            >
-              <div className="flex flex-row gap-8 w-full">
-                {homeDropdownSections.map((section, idx) => (
-                  <div key={idx} className="flex-1 min-w-0">
-                    <p className="text-base font-semibold text-[#c4a58a] mb-4">{section.title}</p>
-                    <div className="flex flex-col">
-                      {section.items.map((item, i) => (
-                        <MenuItem key={i} sx={{ color: 'gray', fontSize: '14px' }} onClick={() => setAnchorElHome(null)}>
-                          {item}
-                        </MenuItem>
-                      ))}
+              <Button
+                endIcon={<KeyboardArrowDownIcon />}
+                sx={{ color: 'gray', textTransform: 'none' }}
+              >
+                Home
+              </Button>
+              <Menu
+                anchorEl={anchorElHome}
+                open={openHomeMenu}
+                onClose={() => setAnchorElHome(null)}
+                MenuListProps={{ onMouseLeave: () => setAnchorElHome(null) }}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'center',
+                }}
+                transformOrigin={{
+                  vertical: 'left',
+                  horizontal: 'center',
+                }}
+                sx={{
+                  '& .MuiPaper-root': {
+                    width: '100%',
+                    maxWidth: '72rem',
+                    margin: 'auto',
+                    padding: '1.5rem',
+                    backgroundColor: '#fff',
+                    boxShadow: '0px 4px 12px rgba(0,0,0,0.1)',
+                    marginTop: '1rem',
+                  },
+                }}
+              >
+                <div className="flex flex-row gap-8 w-full">
+                  {homeDropdownSections.map((section, idx) => (
+                    <div key={idx} className="flex-1 min-w-0">
+                      <p className="text-base font-semibold text-[#c4a58a] mb-4">{section.title}</p>
+                      <div className="flex flex-col">
+                        {section.items.map((item, i) => (
+                          <MenuItem key={i} sx={{ color: 'gray', fontSize: '14px' }} onClick={() => setAnchorElHome(null)}>
+                            {item}
+                          </MenuItem>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </Menu>
-          </div>
-          <div
-            onMouseEnter={(e) => setAnchorElOffice(e.currentTarget)}
-            onMouseLeave={() => setAnchorElOffice(null)}
-            className="relative"
-          >
-            <Button
-              endIcon={<KeyboardArrowDownIcon />}
-              sx={{ color: 'gray', textTransform: 'none' }}
+                  ))}
+                </div>
+              </Menu>
+            </div>
+
+            {/* Office Dropdown */}
+            <div
+              onMouseEnter={(e) => setAnchorElOffice(e.currentTarget)}
+              onMouseLeave={() => setAnchorElOffice(null)}
+              className="relative"
             >
-              Office
-            </Button>
-            <Menu
-              anchorEl={anchorElOffice}
-              open={openOfficeMenu}
-              onClose={() => setAnchorElOffice(null)}
-              MenuListProps={{ onMouseLeave: () => setAnchorElOffice(null) }}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'center',
-              }}
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'center',
-              }}
-              sx={{
-                '& .MuiPaper-root': {
-                  width: '100%',
-                  maxWidth: '72rem',
-                  margin: 'auto',
-                  padding: '1.5rem',
-                },
-              }}
-            >
-              <div className="flex flex-row gap-8 w-full">
-                {officeDropdownSections.map((section, idx) => (
-                  <div key={idx} className="flex-1 min-w-0">
-                    <p className="text-sm font-semibold text-[#c4a58a] mb-4">{section.title}</p>
-                    <div className="flex flex-col">
-                      {section.items.map((item, i) => (
-                        <MenuItem key={i} sx={{ color: 'gray', fontSize: '14px' }} onClick={() => setAnchorElOffice(null)}>{item}</MenuItem>
-                      ))}
+              <Button
+                endIcon={<KeyboardArrowDownIcon />}
+                sx={{ color: 'gray', textTransform: 'none' }}
+              >
+                Office
+              </Button>
+              <Menu
+                anchorEl={anchorElOffice}
+                open={openOfficeMenu}
+                onClose={() => setAnchorElOffice(null)}
+                MenuListProps={{ onMouseLeave: () => setAnchorElOffice(null) }}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'center',
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'center',
+                }}
+                sx={{
+                  '& .MuiPaper-root': {
+                    width: '100%',
+                    maxWidth: '72rem',
+                    margin: 'auto',
+                    padding: '1.5rem',
+                    marginTop: '1rem',
+                  },
+                }}
+              >
+                <div className="flex flex-row gap-8 w-full">
+                  {officeDropdownSections.map((section, idx) => (
+                    <div key={idx} className="flex-1 min-w-0">
+                      <p className="text-sm font-semibold text-[#c4a58a] mb-4">{section.title}</p>
+                      <div className="flex flex-col">
+                        {section.items.map((item, i) => (
+                          <MenuItem key={i} sx={{ color: 'gray', fontSize: '14px' }} onClick={() => setAnchorElOffice(null)}>{item}</MenuItem>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </Menu>
-          </div>
-          {/* Static Links */}
-          {['Reviews', 'Contact'].map((link, index) => (
-            <a
-              key={index}
-              href={`#${link.toLowerCase()}`}
-              className="text-gray-600 hover:text-black transition-colors"
-            >
-              {link}
-            </a>
-          ))}
-        </nav>
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: '#000',
-            borderRadius: '8px',
-            textTransform: 'none',
-            color: '#fff',
-            '&:hover': { backgroundColor: '#111' },
-          }}
-        >
-          3D Build
-        </Button>
+                  ))}
+                </div>
+              </Menu>
+            </div>
 
-        <div className="flex items-center space-x-2">
-          <IconButton>
-            <PersonIcon className="cursor-pointer" />
-          </IconButton>
-
-          {/* <IconButton>
-            <Badge badgeContent={items.length} color="error" size="small">
-              <ShoppingCartIcon className="cursor-pointer" />
-            </Badge>
-          </IconButton> */}
-
-          <Link href={`${routes.cart}`}>
-            <IconButton>
-              <Badge badgeContent={items.length} color="error" size="small">
-                <ShoppingCartIcon className="cursor-pointer" />
-              </Badge>
-            </IconButton>
-          </Link>
-
+            {/* Static Links */}
+            {['Contact'].map((link, index) => (
+              <Link key={index} href={`/${link.toLowerCase()}`} className="text-gray-600 text-sm hover:text-gray-800">{link}</Link>
+            ))}
+          </nav>
         </div>
 
+        {/* Right side - Buttons and icons */}
+        <div className="w-1/3 flex justify-end items-center space-x-4">
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: '#000',
+              borderRadius: '8px',
+              textTransform: 'none',
+              color: '#fff',
+              '&:hover': { backgroundColor: '#111' },
+            }}
+          >
+            3D Build
+          </Button>
+
+          <div className="flex items-center space-x-2">
+            <IconButton>
+              <PersonIcon className="cursor-pointer" />
+            </IconButton>
+
+            <Link href={`${routes.cart}`}>
+              <IconButton>
+                <Badge badgeContent={items.length} color="error" size="small">
+                  <ShoppingCartIcon className="cursor-pointer" />
+                </Badge>
+              </IconButton>
+            </Link>
+          </div>
+        </div>
       </div>
       {/* Mobile Menu Icon */}
       <div className="md:hidden">
@@ -257,109 +256,109 @@ const Header = () => {
       </div>
       {/* Drawer for Mobile */}
       <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
-        <div className="w-72 h-full flex flex-col p-6 bg-white overflow-y-auto">
-          <div className="flex justify-between items-center mb-6">
-            <span className="text-xl font-semibold text-black">Logo</span>
-            <IconButton onClick={toggleDrawer(false)}>
-              <CloseIcon />
-            </IconButton>
+      <div className="w-72 h-full flex flex-col p-6 bg-white overflow-y-auto">
+        <div className="flex justify-between items-center mb-6">
+          <span className="text-xl font-semibold text-black">Logo</span>
+          <IconButton onClick={toggleDrawer(false)}>
+            <CloseIcon />
+          </IconButton>
+        </div>
+        <nav className="flex flex-col space-y-4">
+          {/* Home Collapse */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => setOpenMobileHome((prev) => !prev)}
+              className="flex justify-between items-center text-gray-700 hover:text-black transition-colors mb-4"
+            >
+              <div className="flex items-center space-x-2">
+                <ListItemIcon sx={{ minWidth: 0 }}>{navIcons['Home'].icon}</ListItemIcon>
+                <span>Home</span>
+              </div>
+              {openMobileHome ? <KeyboardArrowUpIcon fontSize="small" /> : <KeyboardArrowDownIcon fontSize="small" />}
+            </button>
+            <Collapse in={openMobileHome} timeout="auto" unmountOnExit>
+              <div className="pl-4 mt-2 flex flex-col space-y-3">
+                {homeDropdownSections.map((section, sIdx) => (
+                  <div key={sIdx}>
+                    <p className="text-xs font-bold text-[#c4a58a]">{section.title}</p>
+                    {section.items.map((item, idx) => (
+                      <a
+                        key={idx}
+                        href="#"
+                        className="text-sm text-gray-600 hover:text-black ml-2 block mb-4"
+                        onClick={toggleDrawer(false)}
+                      >
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </Collapse>
           </div>
-          <nav className="flex flex-col space-y-4">
-            {/* Home Collapse */}
-            <div className="flex flex-col">
-              <button
-                onClick={() => setOpenMobileHome((prev) => !prev)}
-                className="flex justify-between items-center text-gray-700 hover:text-black transition-colors mb-4"
-              >
-                <div className="flex items-center space-x-2">
-                  <ListItemIcon sx={{ minWidth: 0 }}>{navIcons['Home']}</ListItemIcon>
-                  <span>Home</span>
-                </div>
-                {openMobileHome ? <KeyboardArrowUpIcon fontSize="small" /> : <KeyboardArrowDownIcon fontSize="small" />}
-              </button>
-              <Collapse in={openMobileHome} timeout="auto" unmountOnExit>
-                <div className="pl-4 mt-2 flex flex-col space-y-3">
-                  {homeDropdownSections.map((section, sIdx) => (
-                    <div key={sIdx}>
-                      <p className="text-xs font-bold text-[#c4a58a]">{section.title}</p>
-                      {section.items.map((item, idx) => (
-                        <a
-                          key={idx}
-                          href="#"
-                          className="text-sm text-gray-600 hover:text-black ml-2 block mb-4"
-                          onClick={toggleDrawer(false)}
-                        >
-                          {item}
-                        </a>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </Collapse>
-            </div>
-            {/* Office Collapse */}
-            <div className="flex flex-col">
-              <button
-                onClick={() => setOpenMobileOffice((prev) => !prev)}
-                className="flex justify-between items-center text-gray-700 hover:text-black transition-colors mb-4"
-              >
-                <div className="flex items-center space-x-2">
-                  <ListItemIcon sx={{ minWidth: 0 }}>{navIcons['Office']}</ListItemIcon>
-                  <span>Office</span>
-                </div>
-                {openMobileOffice ? <KeyboardArrowUpIcon fontSize="small" /> : <KeyboardArrowDownIcon fontSize="small" />}
-              </button>
-              <Collapse in={openMobileOffice} timeout="auto" unmountOnExit>
-                <div className="pl-4 mt-2 flex flex-col space-y-3">
-                  {officeDropdownSections.map((section, sIdx) => (
-                    <div key={sIdx}>
-                      <p className="text-xs font-bold text-[#c4a58a]">{section.title}</p>
-                      {section.items.map((item, idx) => (
-                        <a
-                          key={idx}
-                          href="#"
-                          className="text-sm text-gray-600 hover:text-black ml-2 block mb-4"
-                          onClick={toggleDrawer(false)}
-                        >
-                          {item}
-                        </a>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </Collapse>
-            </div>
-            {/* Static mobile links */}
-            {['Reviews', 'Contact'].map((link, index) => (
-              <a
-                key={index}
-                href={`#${link.toLowerCase()}`}
-                className="flex items-center space-x-2 text-gray-700 hover:text-black transition-colors mb-4"
-                onClick={toggleDrawer(false)}
-              >
-                <ListItemIcon sx={{ minWidth: 0 }}>{navIcons[link]}</ListItemIcon>
-                <span>{link}</span>
-              </a>
-            ))}
-          </nav>
-          <div className="mt-6">
-            <Button
-              variant="contained"
-              fullWidth
-              sx={{
-                backgroundColor: '#000',
-                borderRadius: '8px',
-                textTransform: 'none',
-                color: '#fff',  
-                '&:hover': { backgroundColor: '#111' },
-              }}
+          {/* Office Collapse */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => setOpenMobileOffice((prev) => !prev)}
+              className="flex justify-between items-center text-gray-700 hover:text-black transition-colors mb-4"
+            >
+              <div className="flex items-center space-x-2">
+                <ListItemIcon sx={{ minWidth: 0 }}>{navIcons['Office'].icon}</ListItemIcon>
+                <span>Office</span>
+              </div>
+              {openMobileOffice ? <KeyboardArrowUpIcon fontSize="small" /> : <KeyboardArrowDownIcon fontSize="small" />}
+            </button>
+            <Collapse in={openMobileOffice} timeout="auto" unmountOnExit>
+              <div className="pl-4 mt-2 flex flex-col space-y-3">
+                {officeDropdownSections.map((section, sIdx) => (
+                  <div key={sIdx}>
+                    <p className="text-xs font-bold text-[#c4a58a]">{section.title}</p>
+                    {section.items.map((item, idx) => (
+                      <a
+                        key={idx}
+                        href="#"
+                        className="text-sm text-gray-600 hover:text-black ml-2 block mb-4"
+                        onClick={toggleDrawer(false)}
+                      >
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </Collapse>
+          </div>
+          {/* Static mobile links */}
+          {['Contact'].map((link, index) => (
+            <a
+              key={index}
+              href={`#${link.toLowerCase()}`}
+              className="flex items-center space-x-2 text-gray-700 hover:text-black transition-colors mb-4"
               onClick={toggleDrawer(false)}
             >
-              3D Build
-            </Button>
-          </div>
+              <ListItemIcon sx={{ minWidth: 0 }}>{navIcons[link].icon}</ListItemIcon>
+              <span>{link}</span>
+            </a>
+          ))}
+        </nav>
+        <div className="mt-6">
+          <Button
+            variant="contained"
+            fullWidth
+            sx={{
+              backgroundColor: '#000',
+              borderRadius: '8px',
+              textTransform: 'none',
+              color: '#fff',
+              '&:hover': { backgroundColor: '#111' },
+            }}
+            onClick={toggleDrawer(false)}
+          >
+            3D Build
+          </Button>
         </div>
-      </Drawer>
+      </div>
+    </Drawer>
     </header>
   );
 };
