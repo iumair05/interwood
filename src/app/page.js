@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <div>
       <HeroSection />
-      <ModalSection />
+      {/* <ModalSection /> */}
       <ExploreHome />
       <DiscoverMoreSection />
       <ExploreOffice />

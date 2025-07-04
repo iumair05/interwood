@@ -8,6 +8,7 @@ import { Button, IconButton } from "@mui/material";
 import CustomButton from "@/commons/CustomButton";
 import { useDispatch } from "react-redux";
 import { decrementQuantity, incrementQuantity, removeFromCart } from "@/redux/CartSlice";
+import { routes } from "@/utils/routes";
 
 const CartPage = () => {
 
@@ -107,7 +108,7 @@ const CartPage = () => {
 
                     <CustomButton
                         text="Proceed to Checkout"
-                        onClick={() => { }}
+                        onClick={() => router.push(`${routes.checkout}`)}
                         className="mt-4 w-full"
                     />
 
