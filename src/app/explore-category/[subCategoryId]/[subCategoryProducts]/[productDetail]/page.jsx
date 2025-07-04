@@ -10,6 +10,7 @@ import { useParams } from "next/navigation";
 import { Loading } from "@/commons/Loading";
 import StarIcon from '@mui/icons-material/Star';
 import { addToCart } from "@/redux/CartSlice";
+import { useDispatch } from "react-redux";
 
 const StarRating = ({ rating }) => {
   return (
@@ -98,6 +99,7 @@ const ProductPage = () => {
   const handleAddToCart = () => {
     dispatch(addToCart(product))
   }
+
 
   return (
     <div className="bg-[#fdf6f0] min-h-screen py-8 px-4 font-sans">

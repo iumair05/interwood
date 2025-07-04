@@ -29,6 +29,7 @@ import { LocalAtm } from '@mui/icons-material';
 export default function CheckOut() {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
+
   const [formData, setFormData] = useState({
     contact: { name: '', email: '', phone: '' },
     shipping: { street: '', apartment: '', city: '', state: '', postalCode: '', country: '' },
@@ -593,6 +594,8 @@ export default function CheckOut() {
                 </motion.a>
               </div>
             </motion.aside>
+
+            
           </div>
         </div>
       </main>
